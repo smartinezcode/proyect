@@ -21,6 +21,27 @@
         "section3 section3 section3";
 }
 
+.container-estrategia {
+    width: 100%;
+    color: white;
+    background-color: rgb(20, 20, 78);
+    max-width: 2000px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.container-contacto {
+    width: 100%;
+    color: white;
+    background-color: rgb(20, 20, 78);
+    max-width: 2000px;
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
 .section1 {
     grid-area: section1;
     padding: 5%;
@@ -29,6 +50,7 @@
 .section1 img {
     width: 90%;
     max-width: 900px;
+    border: 2px solid rgb(125, 118, 255);
 
 }
 
@@ -104,4 +126,50 @@
 
 .pie-pagina li {
     margin: 20px 10px;
+}
+
+/* Resposive */
+
+@media (min-width: 400px) {
+    .section2 h3 {
+        font-size: 90%;
+    }
+
+    .section2 p {
+        display: none;
+    }
+
+    .section3 h3 {
+        font-size: 90%;
+    }
+
+    .section3 p {
+        display: none;
+    }
+
+    .container-estrategia iframe {
+        max-width: 390px;
+    }
+}
+
+@media (min-width: 600px) {
+    .section2 h3 {
+        font-size: 100%;
+    }
+
+    .section2 p {
+        display: flex;
+    }
+
+    .section3 h3 {
+        font-size: 100%;
+    }
+
+    .section3 p {
+        display: flex;
+    }
+
+    .container-estrategia iframe {
+        width: 1000px;
+    }
 }
