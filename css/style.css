@@ -1,21 +1,23 @@
-/* NAV */
+@charset "UTF-8";
+/* Formato contenedor Barra de navegacion */
 .navbar {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-decoration: solid;
   background-image: linear-gradient(#fdfdfd 80%, #797979); }
+  .navbar img {
+    height: 60px; }
+  .navbar nav-item a:hover {
+    color: #070728;
+    scale: 1.05;
+    cursor: pointer; }
 
-.navbar img {
-  height: 60px; }
-
-.nav-item a:hover {
-  color: #070728;
-  scale: 1.05;
-  cursor: pointer; }
-
-/* Container pagina inicio */
+/* Formato contenedor INDEX */
 .container {
   width: 100%;
   min-height: 80vh;
   color: white;
-  background-color: #06061f;
+  background-image: linear-gradient(to bottom, rgba(95, 99, 168, 0.5), rgba(12, 12, 70, 0.5), rgba(95, 99, 168, 0.5)), url(../sources/1000_F_358776700_PjDNp3Cr7Vw6TCiPPGlHSW9Q8ItqFB4V.jpg);
+  background-size: 100vw;
   max-width: 2000px;
   text-align: center;
   display: grid;
@@ -24,11 +26,38 @@
   grid-auto-flow: row;
   grid-template-areas: "section1 section1 section1" "section2 section2 section2" "section3 section3 section3"; }
 
+.container-operatividad, .container-beneficios {
+  width: 100%;
+  min-height: 80vh;
+  color: white;
+  background-image: linear-gradient(to bottom, rgba(95, 99, 168, 0.5), rgba(12, 12, 70, 0.5), rgba(95, 99, 168, 0.5)), url(../sources/fondo-operatividad.png);
+  background-size: 100vw 100vh;
+  max-width: 2000px;
+  text-align: center;
+  display: flex;
+  justify-content: center; }
+  .container-operatividad .carousel-item, .container-beneficios .carousel-item {
+    border: 2px solid #7d76ff;
+    background-color: rgba(10, 10, 52, 0.686);
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+  .container-operatividad .carousel-item :active, .container-beneficios .carousel-item :active {
+    border: 2px solid #7d76ff;
+    background-color: rgba(10, 10, 52, 0.686);
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+
 .container-estrategia {
   width: 100%;
   min-height: 80vh;
   color: white;
-  background-color: #06061f;
+  background-image: linear-gradient(to top, #06061f 95%, #010310);
   max-width: 2000px;
   text-align: center;
   display: flex;
@@ -36,19 +65,19 @@
   .container-estrategiaiframe {
     border: 2px solid #7d7602; }
   .container-estrategia iframe:hover {
-    scale: 1.1; }
-
-#contenido-principal {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center; }
+    scale: 1.05; }
+  .container-estrategia #contenido-principal {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center; }
 
 .container-contacto {
   width: 100%;
   min-height: 80vh;
   color: white;
-  background-color: #06061f;
+  background-image: linear-gradient(to bottom, rgba(255, 255, 0, 0.5), rgba(12, 12, 70, 0.5)), url(../sources/attractive-business-woman-asian-suits-600nw-1965280306.png);
+  background-size: 100vw;
   max-width: 2000px;
   text-align: center;
   display: flex;
@@ -61,18 +90,20 @@
     transition: scale .3s ease-in-out; }
     .container-contacto form input:focus {
       transform: scale(1.05); }
-
-.fondo-specials {
-  border: 2px solid #7d76ff;
-  background-color: #0a0a34;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center; }
+  .container-contacto .formato-submit {
+    color: white;
+    background-color: #08082f; }
+  .container-contacto .fondo-specials {
+    border: 2px solid #7d76ff;
+    background-color: rgba(10, 10, 52, 0.363);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
 
 .section1 {
   grid-area: section1;
-  padding: 5%;
+  padding: 3%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -81,93 +112,99 @@
     width: 75%;
     max-width: 700px;
     border: 2px solid #7d76ff; }
+  .section1 .imagen-benficios {
+    max-width: 79vh; }
+
+.grid-gen, .section2, .section3 {
+  padding: 10px 0 10px 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row; }
 
 .section2 {
-  padding: 10px 0 10px 0;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 0px 0px;
-  grid-auto-flow: row;
   grid-template-areas: "sub1s2 sub2s2 sub3s2";
   grid-area: section2; }
-
-.sub1s2 {
-  border: 2px solid #7d76ff;
-  background-color: #0a0a34;
-  grid-area: sub1s2;
-  display: flex;
-  flex-direction: column;
-  justify-content: center; }
-
-.sub2s2 {
-  border: 2px solid #7d76ff;
-  background-color: #0a0a34;
-  grid-area: sub2s2;
-  display: flex;
-  flex-direction: column;
-  justify-content: center; }
-
-.sub3s2 {
-  border: 2px solid #7d76ff;
-  background-color: #0a0a34;
-  grid-area: sub3s2;
-  display: flex;
-  flex-direction: column;
-  justify-content: center; }
+  .section2 .sub1s2, .section2 .sub2s2, .section2 .sub3s2 {
+    border: 2px solid #7d76ff;
+    background-color: #0a0a34;
+    grid-area: sub1s2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+  .section2 .sub2s2 {
+    grid-area: sub2s2; }
+  .section2 .sub3s2 {
+    grid-area: sub3s2; }
 
 .section3 {
-  padding: 10px 0 10px 0;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 0px 0px;
-  grid-auto-flow: row;
   grid-template-areas: "sub1s3 sub2s3 sub3s3" "sub1s3 sub2s3 sub3s3" "sub1s3 sub2s3 sub3s3";
   grid-area: section3; }
-
-.sub1s3 {
-  border: 2px solid #7d76ff;
-  background-color: #0a0a34;
-  grid-area: sub1s3;
-  display: flex;
-  flex-direction: column;
-  justify-content: center; }
-
-.sub2s3 {
-  border: 2px solid #7d76ff;
-  background-color: #0a0a34;
-  grid-area: sub2s3;
-  display: flex;
-  flex-direction: column;
-  justify-content: center; }
-
-.sub3s3 {
-  border: 2px solid #7d76ff;
-  background-color: #0a0a34;
-  grid-area: sub3s3;
-  display: flex;
-  flex-direction: column;
-  justify-content: center; }
+  .section3 .sub1s3, .section3 .sub2s3, .section3 .sub3s3 {
+    border: 2px solid #7d76ff;
+    background-color: #0a0a34;
+    grid-area: sub1s3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+  .section3 .sub2s3 {
+    grid-area: sub2s3; }
+  .section3 .sub3s3 {
+    grid-area: sub3s3; }
 
 h3:hover {
   scale: 1.05;
   text-decoration: underline;
   cursor: pointer; }
 
-/* footer */
+/* FOOTER */
 .pie-pagina {
   background-image: linear-gradient(to top, #fdfdfd 85%, #797979);
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
   padding: 10px 5px; }
-
-.pie-pagina ul {
-  color: #1a1aff;
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap; }
-
-.pie-pagina li {
-  margin: 20px 10px; }
+  .pie-pagina h4 {
+    color: #070728;
+    padding: 20px; }
+  .pie-pagina ul {
+    color: #1a1aff;
+    padding-top: 10px;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap; }
+    .pie-pagina ul .politica-pr {
+      text-decoration: underline; }
+  .pie-pagina .boton {
+    border: 1px solid #7d76ff;
+    /*anchura, estilo y color borde*/
+    padding: 20px;
+    /*espacio alrededor texto*/
+    background-color: #0a0a34;
+    /*color botón*/
+    font-size: 25px;
+    color: #ffffff;
+    /*color texto*/
+    text-decoration: none;
+    /*decoración texto*/
+    text-transform: uppercase;
+    /*capitalización texto*/
+    font-family: 'Helvetica', sans-serif;
+    /*tipografía texto*/
+    border-radius: 50px;
+    /*bordes redondos*/ }
+  .pie-pagina .logo-footer {
+    width: 50px; }
+  .pie-pagina .logo-contactos {
+    width: 20px; }
+  .pie-pagina .contacto-inicio {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+  .pie-pagina li {
+    margin: 20px 10px; }
 
 /* Resposive */
 @media (min-width: 400px) {
@@ -180,7 +217,16 @@ h3:hover {
   .section3 p {
     display: none; }
   .container-estrategia iframe {
-    max-width: 390px; } }
+    max-width: 390px; }
+  .container-contacto {
+    background-image: linear-gradient(to top, #06061f 95%, #010310);
+    flex-direction: column; }
+  .container-multi {
+    background-image: linear-gradient(to bottom, rgba(95, 99, 168, 0.5), rgba(12, 12, 70, 0.5), rgba(95, 99, 168, 0.5)), url(../sources/fondo-operatividad.png);
+    background-size: 150vh;
+    max-width: 2000px; }
+  .container {
+    background-image: linear-gradient(to top, #06061f 95%, #010310); } }
 
 @media (min-width: 600px) {
   .section2 h3 {
@@ -192,4 +238,15 @@ h3:hover {
   .section3 p {
     display: flex; }
   .container-estrategia iframe {
-    width: 1000px; } }
+    width: 1000px; }
+  .container-contacto {
+    background-image: linear-gradient(to bottom, rgba(255, 255, 0, 0.5), rgba(12, 12, 70, 0.5)), url(../sources/attractive-business-woman-asian-suits-600nw-1965280306.png);
+    background-size: 100vw;
+    flex-direction: row; }
+  .container-multi {
+    background-image: linear-gradient(to bottom, rgba(95, 99, 168, 0.5), rgba(12, 12, 70, 0.5), rgba(95, 99, 168, 0.5)), url(../sources/fondo-operatividad.png);
+    background-size: 100vw 100vh;
+    max-width: 2000px; }
+  .container {
+    background-image: linear-gradient(to bottom, rgba(95, 99, 168, 0.5), rgba(12, 12, 70, 0.5), rgba(95, 99, 168, 0.5)), url(../sources/1000_F_358776700_PjDNp3Cr7Vw6TCiPPGlHSW9Q8ItqFB4V.jpg);
+    background-size: 100vw; } }
